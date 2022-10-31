@@ -22,13 +22,15 @@ class RegisterActivity : AppCompatActivity() {
             val userName = binding.editTextEmail.editableText.toString().trim()
             val password = binding.editTextPassword.editableText.toString().trim()
 
-            if (fName.isEmpty() || lName.isEmpty() || userName.isEmpty() || password.isEmpty())
-                Toast.makeText(this, "Fill All required Fields", Toast.LENGTH_SHORT).show()
-
-            val returnData = Intent()
-            returnData.putExtra("user", User(fName, lName, userName, password))
-            setResult(RESULT_OK, returnData)
-            finish()
+            if (fName.isEmpty() || lName.isEmpty() || userName.isEmpty() || password.isEmpty()) {
+                Toast.makeText(this, "Fill All required Fields.", Toast.LENGTH_SHORT).show()
+            } else {
+                val returnData = Intent()
+                returnData.putExtra("user", User(fName, lName, userName, password))
+                setResult(RESULT_OK, returnData)
+                Toast.makeText(this, "User registered with username: $fName", Toast.LENGTH_SHORT).show()
+                finish()
+            }
         }
     }
 }
