@@ -1,4 +1,4 @@
-package com.rajendra.demobilelab4
+package com.rajendra.demobilelab4.model
 
 import android.os.Parcel
 import android.os.Parcelable

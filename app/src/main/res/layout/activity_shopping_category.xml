@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ShoppingCategory">
+    tools:context=".activities.ShoppingCategory">
 
     <TextView
         android:id="@+id/welcomeText"
@@ -40,6 +40,30 @@
         android:useDefaultMargins="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/categoryText">
+
+        <LinearLayout
+            android:id="@+id/foodLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#000"
+                android:scaleType="centerCrop"
+                android:src="@drawable/food_image" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Food"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/electronicLayout"
@@ -108,29 +132,7 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/foodLayout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:background="#000"
-                android:scaleType="centerCrop"
-                android:src="@drawable/food_image" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Food"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="18sp" />
-
-        </LinearLayout>
     </GridLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

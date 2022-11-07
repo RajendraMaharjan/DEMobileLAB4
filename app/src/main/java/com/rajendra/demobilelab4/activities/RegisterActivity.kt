@@ -1,10 +1,11 @@
-package com.rajendra.demobilelab4
+package com.rajendra.demobilelab4.activities
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.rajendra.demobilelab4.databinding.ActivityRegisterBinding
+import com.rajendra.demobilelab4.model.User
 
 class RegisterActivity : AppCompatActivity() {
 
